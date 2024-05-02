@@ -1,3 +1,2 @@
-# GuardiansScouter
-Guardians of the Rift Scouter Runelite Plugin
-test
+# Guardians Scouter
+Guardians of the Rift Scouter
