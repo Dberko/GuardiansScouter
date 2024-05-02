@@ -24,10 +24,33 @@ public class GuardiansScouterPlugin extends Plugin
 	@Inject
 	private GuardiansScouterConfig config;
 
+//	@Inject
+//	private OverlayManager overlayManager;
+
+//	@Inject
+//	private GuardiansScouterOverlayPanel overlayPanel;
+
+	@Inject
+	private ClientToolbar clientToolbar;
+
 	@Override
 	protected void startUp() throws Exception
 	{
 		log.info("Guardians Scouter started!");
+//		overlayManager.add(overlayPanel);
+		loadPluginPanel();
+	}
+
+	private void loadPluginPanel()
+	{
+		if (navButton != null)
+		{
+			clientToolbar.removeNavigation(navButton);
+		}
+		panel = new GuardiansScouterPanel(this);
+		navButton = NavigationButton.builder().tooltip("Wintertodt Scouter").icon(icon).priority(7).panel(wintertodtScouterPanel).build();
+		clientToolbar.addNavigation(navButton);
+
 	}
 
 	@Override

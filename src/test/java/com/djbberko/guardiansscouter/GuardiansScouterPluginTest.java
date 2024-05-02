@@ -7,7 +7,9 @@ public class GuardiansScouterPluginTest
 {
 	public static void main(String[] args) throws Exception
 	{
-		ExternalPluginManager.loadBuiltin(GuardiansScouterPlugin.class);
+        //noinspection unchecked
+        ExternalPluginManager.loadBuiltin(GuardiansScouterPlugin.class);
+		System.out.println("TEST");
 		RuneLite.main(args);
 	}
 }
